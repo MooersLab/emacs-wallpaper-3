@@ -16,7 +16,7 @@ You can use the new `--init-directory` flag to run my configuration file with Em
 Some of the keybindings may behave differently with your Emacs configuration.
 Enter `C-h k` and the keybinding to check if a keybinding works in your configuration as advertised here.
 
-<p align="center"><img src="EmacsCheatsheet3.png" width="1200" height="600"/></p>
+<p align="center"><img src="EmacsCheatSheet3.png" width="1200" height="600"/></p>
 
 ## Update history
 
