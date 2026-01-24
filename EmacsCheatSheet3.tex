@@ -1,0 +1,244 @@
+\documentclass[10.5pt]{standalone}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{parskip}
+%\setlength\parindent{15pt}
+\def\bll{\boldmath$<$}
+\def\blg{\boldmath$>$}
+\title{Emacs key bindings}
+
+\begin{document}
+%\begin{center}
+
+%\end{center}
+    \begin{tikzpicture}
+        \color{lime}
+       \node at (0,0) {\includegraphics[width=3.5\textwidth]{~/Pictures/ChineseWall3.png}};
+       \node at (1.02,0) {
+\begin{minipage}{270pt}
+\begin{footnotesize}
+\begin{tabular}{>{\bfseries}l l}
+\noindent{\bfseries Undo, Save, Exit} & \\
+    C-u n & Repeat $<$comand$>$ n times.\\ 
+    C-g & No do last command. \\
+    C-x C-c & Exit. \\
+    C-x C-s & Save buffer to a file. \\
+    C-x C-w & Save to specified file. \\
+    C-c d & Delete trailing whitespace.\\
+    s-n & awesome-tab select visible tab.\\
+    C-x / g n & google-this, no prompt.\\
+    M-; & comment or uncomment lines. \\
+    M-i & Pop-up menu with buffer index.\\
+ & \\
+\noindent{\bfseries Navigation} & \\
+    C-v & Go to next page.\\
+    M-v & Go to previous page.\\
+    C-l & Move the screen around the cursor's line.\\ 
+    &(once $->$ center,\\ 
+    &twice $->$ top,\\ 
+    &three times $->$ bottom).\\
+    C-n & Next line.\\
+    C-p & Previous line.\\
+    C-b & Previous character (Backward).\\
+    C-f & Next character (Forward).\\
+    C-a & Beginning of line.\\
+    C-e & End of line.\\
+    M-f & Forward a word.\\
+    M-b & Backward a word.\\
+    M-a & Back to the beginning of the sentence.\\
+    M-e & Forward to the end of the sentence.\\
+    M-\blg:& Move to End of file.\\
+    M-\bll:& Move to the beginning of the file.\\
+    & \\
+\noindent{\bfseries Buffer control} & \\
+    C-x b & Select buffer; [tab] for possible buffers.\\
+    C-1 & Kill current buffer. \\
+    C-x 0 & Kill the current buffer. \\
+    C-x 1 & Kill all buffers except the current buffer.\\
+    C-x 2 & Split current window horizontally.\\
+    C-x 3 & Split current window vertically.\\
+    C-x o & Move cursor to the other window.\\
+    C-M-v & Scrolls other window.\\
+    C-x C-b & ibuffer.\\
+    C-x C-j & dired jump. \\
+    C-c m & Switch to minibuffer.\\
+    C-x o & moves the cursor to the other window.\\
+    C-M-v & Scroll other window.\\
+ & \\
+\noindent{\bfseries Delete and kill} & \\
+    \bll DEL\blg & Delete char just before point.\\
+    C-d & Delete char just after point.\\
+    M-\bll DEL\blg & Kill word just before the point.\\
+    M-d & Kill word just after the point.\\
+    C-k & Kill from point to end of line.\\
+    M-k & Kill from point to end of sentence.\\
+    C-w & Kill from mark to point.\\
+ & \\
+\noindent{\bfseries Tree-sitter} & \\
+    C-c o o  & Combobulate with tree-sitter.\\
+ & \\
+\noindent{\bfseries Clerk} & \\
+    M-RET & clerk show. \\
+\end{tabular}
+\end{footnotesize}
+\end{minipage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Column 2
+\begin{minipage}{270pt}
+\begin{footnotesize}
+\begin{tabular}{>{\bfseries}l l}
+\noindent{\bfseries Restore killed text ``Yanking''} & \\
+    C-y & Restore last killed text.\\
+    M-y & Restore previously killed text.\\
+    C-/, C-x u, C-\_ & Undo last command.\\
+    C-\bll SPC\blg & Mark selection. \\
+ & \\
+\noindent{\bfseries Files \& Buffers} & \\
+   C-x C-f: & Find a file.\\
+   C-x C-s: & Save active file.\\
+   C-x C-b: & List buffers.\\
+   C-x b \bll BufferName\blg:& Visit buffer.\\
+   C-x s & Save some buffers.\\
+   C-x C-c & Exit emacs.\\
+   C-z & Suspend emacs\\
+   & return with \%emacs or 'fg'\\
+ & \\
+\noindent{\bfseries Search} & \\
+   C-s & Forward search \\
+   C-r & Backward search. \\
+   & Next: repeat C-s or C-r.\\
+ & \\
+\noindent{\bfseries Vertico} & \\
+   C-j & vertico next\\
+   C-k & vertico previous.\\
+   M-h & vertico directory up.\\
+ & \\
+\noindent{\bfseries Org-node}  & \\
+   M-o n f & org-node-first \\
+   M-o n i & org-node-insert- \\
+   M-o n <f1> & see all commands \\
+   M-o n b & org-node-context-dwin \\
+   M-o n g & org-node-grep \\
+   M-o n d & org-node-insert-into-related \\
+   M-o n n & org-node-nodeify-entry \\
+   M-o n w & org-node-refile \\
+   M-o n m & org-node-rename-file-by-title \\
+   M-o n s & org-node-seq-dispatch \\
+ & \\
+\noindent{\bfseries Various Commands} & \\
+   M-x replace-string & Replace string.\\
+   &(First letters and TAB \\
+   & are enough to show it.)\\
+   M-x recover-file & Restores the file.\\
+   M-x auto-fill-mode & Automatic breaks lines.\\
+   M-x text-mode & Human text.\\
+   C-x f \bll NumChars\blg : & Set column width.\\
+   M-q  & fill paragraph.\\
+   C-u 70 C-x f & 70 chars per line.\\
+ & \\
+\noindent{\bfseries Yasnippets} & \\
+    C-c y  & Invoke yasnippet hydra.\\
+    C-c y i & Insert snippet. \\
+    C-c y n & New snippet. \\
+    C-o & Expand snippet.\\
+ & \\
+\noindent{\bfseries Org-roam and citar} & \\
+    C-c n f & org-roam-find-note \\
+    C-c n i & org-roam-node-insert. \\
+    C-c n l & org-roam buffer toggle.\\
+    C-c n g & org-roam-graph \\
+    C-c n c & org-id-get-create. \\
+    C-c n j & org-roam-dailies-capture-today.\\
+    C-c b   & citar-insert-citation.\\
+\end{tabular}
+\end{footnotesize}
+\end{minipage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Column 3
+\begin{minipage}{310pt}
+\begin{footnotesize}
+\begin{tabular}{>{\bfseries}l l}
+\noindent{\bfseries LaTeX} & \\
+    C-c C-j  & Insert a new item in a list.\\
+    C-c ; & Comment out region. \\
+    C-c \%   & Cooment out paragraph. \\
+    C-c TAB  & M-x tex-bibtex-file. \\
+    C-c C-a  & Compile and view pdf.\\
+    C-c C-p C-d  & Preview latex equation.\\
+    C-c C-p C-p  & Undue preview of equation.\\
+    C-c =  & Return Table of Contents.\\
+    C-c w & word count. \\
+    C-c u & word count in multi-part document total. \\
+    C-c v & word count in multi-part document section. \\
+    M-=  & Return No. words in region.\\
+    M-x tex-validate-region  & Check for syntax errors.\\
+     & \\
+\noindent{\bfseries Help} & \\
+    C-h c & Basic help command.\\
+    C-h C & Help on interactive functions.\\
+    C-h k & Explain entered keybinding.\\
+    C-h f & dostring for a function.\\
+    C-h F & Manual entry for a function.\\
+    C-h i & Read included manuals.\\
+    C-h a & Orderless search for an interactive command.\\
+    M-x apropos & Search all functions, variables, faces. \\
+    M-x apropos-documentation & Search doc strings.\\
+    M-x apropos-variables & Search for variables. \\
+    M-x apropos-value & Find variables by their value. \\
+    M-x apropos-library & Show all symbols in a package. \\
+     & \\
+\noindent{\bfseries Cider} & \\
+    C-h f RET &  \\
+    cider-repl-mode  & List of commands.\\
+    C-c C-b & Interrupt pending evaluations.\\
+    C-RET & Close unmatched parentheses and evaluate.\\
+    C-c C-o & Remove output from previous evaluation. \\
+    C-c M-o & Switch from Clojure to ClojureScript.\\
+    C-c C-x j j & cider-jack-in for Clojure.\\
+    C-c M-j & cider-jack-in for Clojure.\\
+    C-c C-x C-j C-j & cider-jack-in for ClojureScript.\\
+    M-1 C-c C-x j u & jack-in with clojure-cli.\\
+    M-2 C-c C-x j u & jack-in with leiningen.\\
+    M-3 C-c C-x j u & jack-in with babashka.\\
+    M-4 C-c C-x j u & jack-in with nbb.\\
+     & \\
+\noindent{\bfseries Magit} & \\
+    C-x g & magit status.\\
+    C-c 2 & magit hydra prefix. \\
+    C-x M-g & transient and dwin commands.\\
+     & \\
+\noindent{\bfseries Org-mode} & \\
+     C-c c & Org capture. \\
+     C-c l & Org store link. \\
+     C-c o & org-pomodoro. \\
+      & \\
+\noindent{\bfseries Org-agenda} & \\
+    C-c a a & Org agenda. \\
+    C-c 1  & hdyra for project files.\\
+\end{tabular}
+\end{footnotesize}
+\end{minipage} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Column 4
+\begin{minipage}{270pt}
+\begin{footnotesize}
+\begin{tabular}{>{\bfseries}l l}
+\noindent{\bfseries Tree-sitter} & \\
+    C-c o o  & Combobulate with tree-sitter.\\
+     & \\
+\noindent{\bfseries Clerk} & \\
+    M-RET & clerk show. \\
+\end{tabular}
+\end{footnotesize}
+\end{minipage}
+};
+\end{tikzpicture}
+\end{document}
