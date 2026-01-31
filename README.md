@@ -25,7 +25,7 @@ Enter `C-h k` and the keybinding to check if a keybinding works in your configur
 ## Update history
 
 |Version      | Changes                                                                                                                                    | Date                 |
-|:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------:|
+|:-----------|:------------------------------------------------------------------------------------------------------------------------------------------|:--------------------|
 | Version 0.1 |  Put tables in a column into a single table to clean up the alignment.                                                                                                             | 2026 January 24           |
 | Version 0.2 |  Added some clarifications to the README.md                                                    | 2026 January 31          |
 
