@@ -5,10 +5,14 @@
 
 Desktop wallpaper with some common Emacs keybindings. 
 This is a first approximation.
-There is room to add more keybindings.
+
+# Customization
+There is room to add more keybindings in the right column.
 You can use the tex file to change the keybindings or add new ones to your liking.
+You can change the color of the font; magenta or cyan would provide some jarring contrast.
 You can also use a different backdrop figure with the tex file.
-You need to have LaTeX installed to compile the tex file, or you can use the webservice Overleaf or its ilk.
+You need to have LaTeX installed to compile the tex file, or you can use a webservice like Overleaf to compile the text superimposed on the background image.
+You will have to convert the result PDF in a PNG or JPG file for display as wall paper.
 
 The keybindings work with my associated Emacs configuration [file](https://codeberg.org/MooersLab/emacs30init).
 You can use the new `--init-directory` flag to run my configuration file with Emacs 29 or Emacs 30.
