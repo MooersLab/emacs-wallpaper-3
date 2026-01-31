@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/static/v1?label=EmacsWallPaper&message=0.1&color=brightcolor)
+![Version](https://img.shields.io/static/v1?label=EmacsWallPaper&message=0.2&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 # Emacs Keybindings on Desktop Wallpaper
@@ -22,7 +22,7 @@ Enter `C-h k` and the keybinding to check if a keybinding works in your configur
 
 |Version      | Changes                                                                                                                                    | Date                 |
 |:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------:|
-| Version 0.1 |  Cleaned up tables in columns.                                                                                                             | 2026 January 24           |
+| Version 0.2 |  Put tables in a column into a single table to clean up the alignment.                                                                                                             | 2026 January 24           |
 
 ## Funding
 - NIH: R01 CA242845, R01 AI088011
