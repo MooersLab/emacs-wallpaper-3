@@ -22,6 +22,13 @@ Enter `C-h k` and the keybinding to check if a keybinding works in your configur
 
 <p align="center"><img src="EmacsCheatSheet3.png" width="1200" height="600"/></p>
 
+## Org-mode version
+
+Org-mode has a powerful document exporter for compiling PDFs from org-mode files (C-c C-c l o). 
+This can be easier than running pdflatex in the terminal.
+Check out this [org-mode version](https://github.com/MooersLab/emacs-cheatsheet-wallpaper-org), which yeilds the same result.
+
+
 ## Update history
 
 |Version      | Changes                                                                                                                                    | Date                 |
